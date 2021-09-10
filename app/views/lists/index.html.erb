@@ -25,9 +25,11 @@
 
 <%= link_to 'New List', new_list_path, class: 'btn btn-primary' %>
 
+<div>
 <%= cl_image_tag("https://res.cloudinary.com/dk9bhadx6/image/upload/v1631265106/c2yfrsti4ls9qwk4wmzy.jpg",
       width: 400, height: 300, crop: :fill) %>
 
 <!-- for face detection -->
 <%= cl_image_tag("https://res.cloudinary.com/dk9bhadx6/image/upload/v1631265097/fasxeeessrsffsktyc1b.jpg",
       width: 150, height: 150, crop: :thumb, gravity: :face) %>
+</div>
