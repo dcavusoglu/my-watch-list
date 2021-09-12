@@ -27,3 +27,15 @@
 <br>
 
 <%= link_to 'New List', new_list_path, class: 'btn btn-primary' %>
+
+ol {
+  display: flex;
+  justify-content: space-between;
+  li {
+    text-decoration: none;
+    list-style: none;
+    img {
+      width: 200px;
+    }
+  }
+}

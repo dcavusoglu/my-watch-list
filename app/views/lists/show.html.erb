@@ -1,15 +1,28 @@
-<%= @list.name %>
-<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="cards" >
+
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, height: 300, crop: :fill %>')">
+  <%= @list.name %>
+</div>
+</div>
+
+
+
+<% @list.bookmarks.each do |bookmark| %>
+  <div class="card-product">
+    <img src="<%= bookmark.movie.poster_url %>" alt="movie poster">
+    <div class="card-product-infos">
+      <h2><%= bookmark.movie.title %></h2>
+      <p><%= bookmark.comment %></p>
+    </div>
+    <div class="del"><%= link_to "🗑", bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+  </div>
+<% end %>
+
+
 <br>
 
-<ol>
-<% @list.bookmarks.each do |bookmark| %>
-  <li><%= bookmark.movie.title %> |
-  <%= bookmark.comment %>
-  <%= link_to "X", bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-<% end %>
-</ol>
-<br>
+
+
 
 
 <div>

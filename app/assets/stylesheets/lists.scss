@@ -1,3 +1,28 @@
 // Place all the styles related to the lists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+ol {
+  display: flex;
+  justify-content: space-between;
+  li {
+    text-decoration: none;
+    list-style: none;
+    img {
+      width: 200px;
+    }
+  }
+}
+.btn-create {
+  padding: 3px;
+  background-color: chartreuse;
+  box-shadow: darkcyan;
+  border-radius: 3px;
+  width: 120px;
+  &:hover {
+    background-color: rgb(225, 243, 64);
+    opacity: 0.5;
+  }
+}
+.new-list {
+  margin: 20px;
+}
