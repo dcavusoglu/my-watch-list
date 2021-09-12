@@ -23,6 +23,18 @@ ol {
     opacity: 0.5;
   }
 }
+
+.btn-bookmark {
+  padding: 3px;
+  background-color: chartreuse;
+  box-shadow: darkcyan;
+  border-radius: 3px;
+  width: 170px;
+  &:hover {
+    background-color: rgb(225, 243, 64);
+    opacity: 0.5;
+  }
+}
 .new-list {
   margin: 20px;
 }
